@@ -1,10 +1,10 @@
-{"key":"Baguette","val":{"caption":"Baguette","message":"","image":"baguette2.jpg","button":"Today's Breads"}}
-{"key":"Semolina","val":{"caption":"Semolina","message":"","image":"breadschedule.jpg","button":"Bread Schedule"}}
-{"key":"Vienna","val":{"caption":"Vienna","message":"","image":"breadkfastbread.jpg","button":"Lunch"}}
-{"key":"Sourdough","val":{"caption":"Sourdough","message":"","image":"soup.jpg","button":"Soups"}}
-{"key":"Italian Herb","val":{"caption":"Italian Herb","message":"","image":"dessert2.jpg","button":"Desserts"}}
-{"key":"Rye","val":{"caption":"Rye","message":"","image":"groupbread.jpg","button":"Catering"}}
-{"key":"Challah","val":{"caption":"Challah","message":"","image":"groupbread.jpg","button":"Catering"}}
-{"key":"Olive Rosemary","val":{"caption":"Olive Rosemary","message":"","image":"groupbread.jpg","button":"Catering"}}
-{"key":"Honey Oat Pecan","val":{"caption":"Honey Oat Pecan","message":"","image":"groupbread.jpg","button":"Catering"}}
-{"key":"Potato Garlic","val":{"caption":"Potato Garlic","message":"","image":"groupbread.jpg","button":"Catering"}}
+{"key":"baguette","val":{"caption":"Baguette","message":"","image":"baguette2.jpg","button":"Today's Breads"}}
+{"key":"semolina","val":{"caption":"Semolina","message":"","image":"breadschedule.jpg","button":"Bread Schedule"}}
+{"key":"vienna","val":{"caption":"Vienna","message":"","image":"breadkfastbread.jpg","button":"Lunch"}}
+{"key":"sourdough","val":{"caption":"Sourdough","message":"","image":"soup.jpg","button":"Soups"}}
+{"key":"italian Herb","val":{"caption":"Italian Herb","message":"","image":"dessert2.jpg","button":"Desserts"}}
+{"key":"rye","val":{"caption":"Rye","message":"","image":"groupbread.jpg","button":"Catering"}}
+{"key":"challah","val":{"caption":"Challah","message":"","image":"groupbread.jpg","button":"Catering"}}
+{"key":"oliverosemary","val":{"caption":"Olive Rosemary","message":"","image":"groupbread.jpg","button":"Catering"}}
+{"key":"honeyoatpecan","val":{"caption":"Honey Oat Pecan","message":"","image":"groupbread.jpg","button":"Catering"}}
+{"key":"potatogarlic","val":{"caption":"Potato Garlic","message":"","image":"groupbread.jpg","button":"Catering"}}

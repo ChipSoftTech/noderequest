@@ -1,7 +1,7 @@
 var url = require('url');
-var helper = require('./helpers.js');
-var partials = require('./partials.js');
 var path = require('path');
+var helper = require('./lib/helpers.js');
+var partials = require('./lib/partials.js');
 
 function handle(req, res) {
     var file = './routes' + req.url;

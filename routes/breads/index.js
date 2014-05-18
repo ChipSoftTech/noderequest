@@ -1,6 +1,6 @@
 var url = require('url');
-var helper = require(rootpath + '/helpers.js');
-var partials = require(rootpath + '/partials.js');
+var helper = require(rootpath + '/lib/helpers.js');
+var partials = require(rootpath + '/lib/partials.js');
 
 function process(req, res) {
     console.log("routes.breads.index.js.process");
@@ -30,7 +30,7 @@ function process(req, res) {
             '<div class="product menu-category">' +
             '  <div class="menu-category-name list-group-item active">' + val.caption + '</div>' +
             '  <div class="product-image">' +
-            '    <img class="product-image menu-item list-group-item" src="img/assets/' + val.image + '">' +
+            '    <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
             '   </div>' +
             '   <a href="./mockuptoday.html" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
             '</div>';        

@@ -1,6 +1,6 @@
 var url = require('url');
-var helper = require(rootpath + '/helpers.js');
-var partials = require(rootpath + '/partials.js');
+var helper = require(rootpath + '/lib/helpers.js');
+var partials = require(rootpath + '/lib/partials.js');
 
 function process(req, res) {
     console.log("routes.error.js.process");

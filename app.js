@@ -1,18 +1,10 @@
 // This supports Clusters and Domains
 //
-var url = require('url');
-var path = require('path');
-
 var cluster = require('cluster');
-var requestHandler = require('./requesthandler.js');
-var helpers = require('./helpers.js');
-var dbHelper = require('./helperdb.js');
-var partials = require('./partials.js');
-
-var
-http = require('http'),
-path = require('path'),
-fs = require('fs');
+var url = require('url');
+var http = require('http');
+var path = require('path');
+var fs = require('fs');
 
 var PORT = +process.env.PORT || 1337;
 
@@ -40,13 +32,15 @@ if (cluster.isMaster) {
     // called once per worker
     // each worker has its own memory
     console.log('Starting worker - listening on port: ' + PORT);
+    
+    //Cache application rootPath
+    rootpath = path.dirname(require.main.filename);    
 
     //Load the databases
     console.log("Starting databases");
-    dbHelper.start(); 
     
-    //Cache application rootPath
-    rootpath = path.dirname(require.main.filename);
+    var dbHelper = require(rootpath + '/lib/helperdb.js');
+    dbHelper.start(); 
     
     var domain = require('domain');  
     
@@ -81,7 +75,8 @@ if (cluster.isMaster) {
                 res.writeHead(500, {
                     "Context-Type": "text/plain"
                 });
-                res.write(partials.page500());
+                
+                res.write(require(rootpath + '/lib/partials.js').page500());
                 res.end();
             } catch (er2) {
                 // oh well, not much we can do at this point.
@@ -100,6 +95,9 @@ if (cluster.isMaster) {
             var ext = path.extname(path.basename(req.url));              
             //console.log("ext: " + ext);
                         
+            var helpers = require('./lib/helpers.js');
+            var requestHandler = require('./requesthandler.js');            
+            
             if(helpers.isMimeType(ext))
             {                
                 helpers.getFile(req, res);    

@@ -22,13 +22,19 @@ Node Request is a node.js starter kit.  You won't find anything fancy here, just
 
 ## TODO
 
+- Release v1
 - Clean up Twitter Bootstrap, we don't need all that files at start
 - Finalize the design pattern and naming conventions
-- Add default page
 - Querystring and Post helper
-- Add dirty for database 
+- Add demo pages
+- Add databases for demo pages
+
+- Release v2
 - Logger helper
-- Release v1
+
+- Release v3
+- Create database engine
+
 
 ## Thoughts
 Well in my experience, every time you add a new third party tool, you tie yourself into that third party for the life expectancy of the product your developing. This is bad, the lack of control and understanding of someones idea of good code which has been black boxed is very hard to deal with when something goes wrong (it always does) in the aforementioned black box. You will find many disclaimers attached to third party licence agreements, "use at own risk" is one that I see often. 
