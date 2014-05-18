@@ -3,7 +3,7 @@ var helper = require('./helpers');
 var partials = require('./partials');
 
 function process(req, res) {
-    console.log("route.process: start");
+    console.log("routetoday.process: start");
 
     var result =
         '<!DOCTYPE html>' +
@@ -109,7 +109,7 @@ function process(req, res) {
     res.write(result);
     res.end();
 
-    console.log("route.process: done");
+    console.log("routetoday.process: done");
 }
 
 

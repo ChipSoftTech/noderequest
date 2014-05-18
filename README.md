@@ -13,7 +13,7 @@ Node Request is a node.js starter kit.  You won't find anything fancy here, just
 
 ### Back-end
 
-- [dirty](https://github.com/felixge/node-dirty/)
+- [NONE]()
 
 
 ### Front-end

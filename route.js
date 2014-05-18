@@ -1,7 +1,6 @@
 var url = require('url');
 var helper = require('./helpers');
 var partials = require('./partials');
-var dirty = require('dirty');
 
 function process(req, res) {
     console.log("route.process: start");
