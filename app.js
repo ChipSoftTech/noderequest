@@ -1,11 +1,13 @@
 // This supports Clusters and Domains
 //
 var url = require('url');
+var path = require('path');
 
 var cluster = require('cluster');
-var requestHandler = require('./requesthandler');
-var helpers = require('./helpers');
-var dbHelper = require('./dbhelper');
+var requestHandler = require('./requesthandler.js');
+var helpers = require('./helpers.js');
+var dbHelper = require('./helperdb.js');
+var partials = require('./partials.js');
 
 var
 http = require('http'),
@@ -41,7 +43,10 @@ if (cluster.isMaster) {
 
     //Load the databases
     console.log("Starting databases");
-    dbHelper.start();    
+    dbHelper.start(); 
+    
+    //Cache application rootPath
+    rootpath = path.dirname(require.main.filename);
     
     var domain = require('domain');  
     
@@ -69,13 +74,14 @@ if (cluster.isMaster) {
                 cluster.worker.disconnect();
 
                 // create the error
-                var errorMessage = Error.http(500, null, er.stack);
+                var errorMessage = Error.http(500, null, er.stack);                
+                console.log(errorMessage.status + ': ' + errorMessage.message + '\n' + errorMessage.data);
 
                 // try to send an error to the request that triggered the problem
                 res.writeHead(500, {
                     "Context-Type": "text/plain"
                 });
-                res.write(errorMessage.status + ': ' + errorMessage.message + '\n' + errorMessage.data);
+                res.write(partials.page500());
                 res.end();
             } catch (er2) {
                 // oh well, not much we can do at this point.

@@ -16,7 +16,7 @@ extensions = {
     ".jpg" : "image/jpeg"
 };
 
-var statusCodes = {
+statusCodes = {
     "400": "Bad Request",
     "401": "Unauthorized",
     "402": "Payment Required",
@@ -161,12 +161,22 @@ function isMimeType(ext) {
 //helper function handles file processing
 function getFile(req, res){
             var pathname = url.parse(req.url).pathname,
-                fileName = path.basename(req.url) || 'index.html',
+                fileName = path.basename(req.url) || 'index.js',
                 ext = path.extname(fileName),
                 localFolder = __dirname + '/' + ext.replace('.','')  + '/';    
     
     var filePath = __dirname + req.url;
     var mimeType = extensions[ext];   
+  
+  /*  
+    console.log('pathname: ' + pathname);
+    console.log('fileName: ' + fileName);
+    console.log('ext: ' + ext);
+    console.log('localFolder: ' + localFolder);   
+    console.log('__dirname: ' + __dirname);   
+    console.log('filePath: ' + filePath);  
+    console.log('req.url: ' + req.url); 
+    */
     
     //does the requested file exist?
     fs.exists(filePath,function(exists){
@@ -196,6 +206,7 @@ function getFile(req, res){
         };
     });
 };
+
 
 // Export functions
 exports.queryString = queryString;
