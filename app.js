@@ -5,6 +5,7 @@ var url = require('url');
 var cluster = require('cluster');
 var requestHandler = require('./requesthandler');
 var helpers = require('./helpers');
+var dbHelper = require('./dbhelper');
 
 var
 http = require('http'),
@@ -31,10 +32,19 @@ if (cluster.isMaster) {
         console.error('Disconnect worker on port ' + PORT + '!');
         cluster.fork();
     }); 
+    
 } else {
-    // the worker
-    var domain = require('domain');
+    // the worker process
+    // called once per worker
+    // each worker has its own memory
+    console.log('Starting worker - listening on port: ' + PORT);
 
+    //Load the databases
+    console.log("Starting databases");
+    dbHelper.start();    
+    
+    var domain = require('domain');  
+    
     var server = require('http').createServer(function (req, res) {
         var d = domain.create();
         d.on('error', function (er) {
@@ -42,8 +52,6 @@ if (cluster.isMaster) {
 
             // Note: uncaught error has occurred!
             // By definition, something unexpected occurred,
-            // which we probably didn't want.
-
             try {
                 // make sure we close down within 30 seconds
                 var killtimer = setTimeout(function () {
@@ -95,5 +103,4 @@ if (cluster.isMaster) {
         });
     });
     server.listen(PORT);
-    console.log('Starting worker - listening on port: ' + PORT);
 }
