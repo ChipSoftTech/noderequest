@@ -1,9 +1,15 @@
 // This supports Clusters and Domains
 //
+var url = require('url');
 
 var cluster = require('cluster');
 var requestHandler = require('./requesthandler');
 var helpers = require('./helpers');
+
+var
+http = require('http'),
+path = require('path'),
+fs = require('fs');
 
 var PORT = +process.env.PORT || 1337;
 
@@ -17,7 +23,7 @@ if (cluster.isMaster) {
     // increasing our resilience to unexpected errors.
 
     console.log('Application Starting - Master');
-    
+
     cluster.fork();
     cluster.fork();
 
@@ -54,16 +60,16 @@ if (cluster.isMaster) {
                 // 'disconnect' in the cluster master, and then it will fork
                 // a new worker.
                 cluster.worker.disconnect();
-                
+
                 // create the error
                 var errorMessage = Error.http(500, null, er.stack);
-                
+
                 // try to send an error to the request that triggered the problem
                 res.writeHead(500, {
                     "Context-Type": "text/plain"
                 });
                 res.write(errorMessage.status + ': ' + errorMessage.message + '\n' + errorMessage.data);
-                res.end();                
+                res.end();
             } catch (er2) {
                 // oh well, not much we can do at this point.
                 console.error('Error sending 500!', er2.stack);
@@ -78,10 +84,17 @@ if (cluster.isMaster) {
 
         // Now run the handler function in the domain.
         d.run(function () {
-            requestHandler.handle(req, res);
+            var ext = path.extname(path.basename(req.url));              
+            //console.log("ext: " + ext);
+                        
+            if(helpers.isMimeType(ext))
+            {                
+                helpers.getFile(req, res);    
+            } else {
+                requestHandler.handle(req, res);
+            }
         });
     });
     server.listen(PORT);
     console.log('Starting worker - listening on port: ' + PORT);
 }
-
