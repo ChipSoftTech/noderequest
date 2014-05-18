@@ -30,8 +30,7 @@ if (cluster.isMaster) {
     cluster.on('disconnect', function (worker) {
         console.error('Disconnect worker on port ' + PORT + '!');
         cluster.fork();
-    });
-
+    }); 
 } else {
     // the worker
     var domain = require('domain');

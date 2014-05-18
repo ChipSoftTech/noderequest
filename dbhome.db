@@ -1,0 +1,7 @@
+{"key":"daily","val":{"caption":"Today's Bread","message":"Available","image":"dailybread.jpg","button":"Today's Breads"}}
+{"key":"schedule","val":{"caption":"Daily Bread Schedule","message":"See Our","image":"breadschedule.jpg","button":"Bread Schedule"}}
+{"key":"breakfast","val":{"caption":"Breakfast","message":"Get Your Day Started","image":"breadkfastbread.jpg","button":"Lunch"}}
+{"key":"lunch","val":{"caption":"Lunch","message":"Fresh & Healthy","image":"lunch2.jpg","button":"Lunch"}}
+{"key":"soup","val":{"caption":"Soup of the Day","message":">See All Our","image":"soup.jpg","button":"Soups"}}
+{"key":"dessert","val":{"caption":"Dessert","message":"Gourmet","image":"dessert2.jpg","button":"Desserts"}}
+{"key":"catering","val":{"caption":"Catering","message":"Order Ahead","image":"groupbread.jpg","button":"Catering"}}
