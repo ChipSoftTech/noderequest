@@ -5,37 +5,41 @@ var partials = require(rootpath + '/lib/partials.js');
 function process(req, res) {
     console.log("routes.breads.index.js.process");
 
-    var result = '';
-
-    result =
+    var result =
         '<!DOCTYPE html>' +
         '<html lang="en">' +
         partials.head() +
         '<body>' +
         partials.header() +
-        '    <div class="container">' +
-        '        <div class="menu row">' +
-        '            <div class="jumbotron">' +
-        '                <h1>The Bakery</h1>' +
-        '                <h2>at Some University</h2>' +
-        '            </div>' +
-        '        </div>' +
-        '        ' +
-        '        <div class="menu row">' +
-        '            <div class="col-sm-12">' +
-        '                <div class="productsrow">';
+        '<div class="container">' +
+        '    <div class="menu row">' +
+        '        <div class="col-sm-12">' +
+        '            <div class="center-block text-center">' +
+        '                <h1>Our Breads</h1>' +
+        '                <p class="lead">What\'s Baking</p>' +
+        '            </div> ' +
+        '        </div>    ' +
+        '    </div>        ' +
+        ' <div class="menu row">' +
+        '    <div class="col-sm-12">' +
+        '        <div class="productsrow">';
 
-    db.home.forEach( function(val) {
+
+    for (var key in db.breads) {
+        var val = db.breads[key];
+
+        var d = new Date();
+        var n = d.getDay();
         result +=
             '<div class="product menu-category">' +
             '  <div class="menu-category-name list-group-item active">' + val.caption + '</div>' +
             '  <div class="product-image">' +
             '    <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
             '   </div>' +
-            '   <a href="./mockuptoday.html" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
-            '</div>';        
-    });
-    
+            '   <a href="#" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
+            '</div>';
+    }
+
     result +=
         '                </div>  <!--/productsrow-->' +
         '            </div>' +

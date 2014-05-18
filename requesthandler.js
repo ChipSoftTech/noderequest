@@ -4,7 +4,16 @@ var helper = require('./lib/helpers.js');
 var partials = require('./lib/partials.js');
 
 function handle(req, res) {
-    var file = './routes' + req.url;
+    var q = req.url.indexOf("?");
+    
+    var file;
+    
+    if( q < 0) {
+        file = './routes' + req.url;
+    } else {
+        file = './routes' + req.url.substring(0,q);
+        
+    }
 
     try {
         var route = require(file);

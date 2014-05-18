@@ -38,7 +38,7 @@ function process(req, res) {
                 '  <div class="product-image">' +
                 '    <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
                 '   </div>' +
-                '   <a href="#" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
+                '   <a href="./breads/details?key=' + key + '" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
                 '</div>';
         }
     }
