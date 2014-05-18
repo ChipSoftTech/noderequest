@@ -1,10 +1,18 @@
+html {
+overflow: -moz-scrollbars-vertical; 
+overflow-y: scroll;
+}
+
 body {
  padding-top:70px;
 }
 
 .productsrow {
+  column-width: 18em;  
  -moz-column-width: 18em;
  -webkit-column-width: 18em;
+
+ column-gap:1em;  
  -moz-column-gap: 1em;
  -webkit-column-gap: 1em; 
 

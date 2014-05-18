@@ -10,7 +10,7 @@ function process(req, res) {
         '<html lang="en">' +
         partials.head() +
         '<body>' +
-        partials.header() +
+        partials.header('breads') +
         '<div class="container">' +
         '    <div class="menu row">' +
         '        <div class="col-sm-12">' +
@@ -36,7 +36,7 @@ function process(req, res) {
             '  <div class="product-image">' +
             '    <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
             '   </div>' +
-            '   <a href="#" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
+            '   <a href="/breads/details?key=' + key + '" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
             '</div>';
     }
 

@@ -10,7 +10,7 @@ function process(req, res) {
         '<html lang="en">' +
         partials.head() +
         '<body>' +
-        partials.header() +
+        partials.header('today') +
         '<div class="container">' +
         '    <div class="menu row">' +
         '        <div class="col-sm-12">' +

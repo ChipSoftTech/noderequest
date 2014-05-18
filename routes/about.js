@@ -5,28 +5,32 @@ var partials = require(rootpath + '/lib/partials.js');
 function process(req, res) {
     console.log("routes.about.js.process");
 
-    var result = '';
-
-    result =
+    var result =
         '<!DOCTYPE html>' +
         '<html lang="en">' +
         partials.head() +
         '<body>' +
-        partials.header() +
+        partials.header('about') +
         '<div class="container">' +
         '    <div class="menu row">' +
         '        <div class="col-sm-12">' +
         '            <div class="center-block text-center">' +
         '                <h1>About us</h1>' +
-        '                <p class="lead">Who are we?</p>' +
+        '                <p class="lead">What would you like to know?</p>' +
         '            </div> ' +
         '        </div>    ' +
         '    </div>        ' +
-        '    <div class="menu row">' +
-        '      <div class="col-sm-12">'
-        '      </div>' +
-        '    </div> <!--/row-->' +
-        '</div> <!--/container-->' +
+        ' <div class="menu row">' +
+        '    <div class="col-sm-12">' +
+        '        <div class="productsrow">';
+
+
+
+    result +=
+        '                </div>  <!--/productsrow-->' +
+        '            </div>' +
+        '        </div> <!--/row-->' +
+        '    </div> <!--/container-->' +
         partials.footer() +
         '</body>' +
         '</html>';
