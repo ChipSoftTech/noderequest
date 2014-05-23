@@ -1,12 +1,12 @@
-{"key":"baguette","val":{"caption":"Baguette","message":"$4.10","image":"baguette7.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
-{"key":"semolina","val":{"caption":"Semolina","message":"$1.89","image":"bread4.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
-{"key":"bienna","val":{"caption":"Vienna","message":"$1.60","image":"bread5.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
-{"key":"sourdough","val":{"caption":"Sourdough","message":"$3.00","image":"bread6.jpg","button":"Details","schedule":[1,2,3,4,5,6]}}
-{"key":"italianherb","val":{"caption":"Italian Herb","message":"$7.00","image":"bread7.jpg","button":"Details","schedule":[6]}}
-{"key":"rye","val":{"caption":"Rye","message":"$1.25","image":"bread8.jpg","button":"Details","schedule":[0,1,2,3]}}
-{"key":"challah","val":{"caption":"Challah","message":"$2.99","image":"bread9.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
-{"key":"oliverosemary","val":{"caption":"Olive Rosemary","message":"$3.50","image":"bread10.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
-{"key":"honeyoatpecan","val":{"caption":"Honey Oat Pecan","message":"$4.25","image":"bread11.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
-{"key":"potatogarlic","val":{"caption":"Potato Garlic","message":"$0.98","image":"bread12.jpg","button":"Details","schedule":[4]}}
-{"key":"wheat","val":{"caption":"Wheat","message":"$2.50","image":"bread13.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
-{"key":"loaf","val":{"caption":"Loaf","message":"$1.99","image":"bread14.jpg","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"baguette","val":{"caption":"Baguette","message":"$4.10","image":"baguette7.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"semolina","val":{"caption":"Semolina","message":"$1.89","image":"bread4.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"bienna","val":{"caption":"Vienna","message":"$1.60","image":"bread5.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"sourdough","val":{"caption":"Sourdough","message":"$3.00","image":"bread6.png","button":"Details","schedule":[1,2,3,4,5,6]}}
+{"key":"italianherb","val":{"caption":"Italian Herb","message":"$7.00","image":"bread7.png","button":"Details","schedule":[6]}}
+{"key":"rye","val":{"caption":"Rye","message":"$1.25","image":"bread8.png","button":"Details","schedule":[0,1,2,3]}}
+{"key":"challah","val":{"caption":"Challah","message":"$2.99","image":"bread9.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"oliverosemary","val":{"caption":"Olive Rosemary","message":"$3.50","image":"bread10.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"honeyoatpecan","val":{"caption":"Honey Oat Pecan","message":"$4.25","image":"bread11.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"potatogarlic","val":{"caption":"Potato Garlic","message":"$0.98","image":"bread12.png","button":"Details","schedule":[4]}}
+{"key":"wheat","val":{"caption":"Wheat","message":"$2.50","image":"bread13.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
+{"key":"loaf","val":{"caption":"Loaf","message":"$1.99","image":"bread14.png","button":"Details","schedule":[0,1,2,3,4,5,6]}}
