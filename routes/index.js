@@ -14,17 +14,24 @@ function process(req, res) {
         '<body>' +
         partials.header('home') +
         '    <div class="container">' +
-        '        <div class="menu row">' +
+        '        <div class="menu row hidden-xs">' +
         '            <div class="jumbotron">' +
         '                <h1>The Bakery</h1>' +
         '                <h2>at Some University</h2>' +
         '            </div>' +
-        '            <div class="menu-caption hidden-xs">' + 
+        '            <div class="menu-caption">' + 
         '                <h4>Welcome to The Bakery</h4>' + 
         '                <p class="blog-post-meta">The Bakery at Some University offers world-class excellence in baking and pastry arts, including a variety of specialty baked goods, pastries, cookies and candies. The Bakery also produces wholesale restaurant desserts for several of SomeCity\'s premier restaurants and specializes in unique cakes for weddings, corporate celebrations and high profile special events.</p>' + 
         '            </div>' + 
         '        </div>' +
-        '        ' +
+        '        <div class="menu row visible-xs">' +
+        '            <div class="col-sm-12">' +
+        '               <div class="center-block text-center">' +
+        '                   <h1>The Bakery</h1>' +
+        '                   <p class="lead">at Some University</p>' +
+        '               </div> ' +
+        '        </div>    ' +
+        '    </div>        ' +        
         '        <div class="menu row">' +
         '            <div class="col-sm-12">' +
         '                <div class="productsrow">';
