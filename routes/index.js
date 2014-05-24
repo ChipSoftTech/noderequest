@@ -19,6 +19,10 @@ function process(req, res) {
         '                <h1>The Bakery</h1>' +
         '                <h2>at Some University</h2>' +
         '            </div>' +
+        '            <div class="menu-caption hidden-xs">' + 
+        '                <h4>Welcome to The Bakery</h4>' + 
+        '                <p class="blog-post-meta">The Bakery at Some University offers world-class excellence in baking and pastry arts, including a variety of specialty baked goods, pastries, cookies and candies. The Bakery also produces wholesale restaurant desserts for several of SomeCity\'s premier restaurants and specializes in unique cakes for weddings, corporate celebrations and high profile special events.</p>' + 
+        '            </div>' + 
         '        </div>' +
         '        ' +
         '        <div class="menu row">' +
@@ -33,7 +37,9 @@ function process(req, res) {
         '<div class="product menu-category">' +
         '  <div class="menu-category-name list-group-item active">' + val.caption + '</div>' +
         '  <div class="product-image">' +
-        '    <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
+        '    <a href="./' + key + '">' +            
+        '      <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
+        '    </a>' +    
         '   </div>' +
         '   <a href="./' + key + '" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
         '</div>';  
