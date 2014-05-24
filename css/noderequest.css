@@ -67,3 +67,9 @@ body {
     padding-bottom: 100px;
 }
 
+a.box {
+    text-decoration: none !important;
+    color: #555;
+}    
+    
+

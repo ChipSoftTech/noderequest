@@ -41,15 +41,17 @@ function process(req, res) {
     {
         var val = db.home[key];
         result +=
+  
         '<div class="product menu-category">' +
-        '  <div class="menu-category-name list-group-item active">' + val.caption + '</div>' +
-        '  <div class="product-image">' +
-        '    <a href="./' + key + '">' +            
-        '      <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
-        '    </a>' +    
-        '   </div>' +
-        '   <a href="./' + key + '" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
-        '</div>';  
+        '    <a class="box" href="./' + key + '">' +      
+        '       <div class="menu-category-name list-group-item active">' + val.caption + '</div>' +
+        '       <div class="product-image">' +
+        '           <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
+        '       </div>' +
+        '    </a>' +             
+        '    <a href="./' + key + '" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
+        '</div>';
+         
     }
     
 
