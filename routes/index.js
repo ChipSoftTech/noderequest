@@ -19,10 +19,10 @@ function process(req, res) {
         '                <h1>The Bakery</h1>' +
         '                <h2>at Some University</h2>' +
         '            </div>' +
-        '            <div class="menu-caption">' + 
-        '                <h4>Welcome to The Bakery</h4>' + 
-        '                <p class="blog-post-meta">The Bakery at Some University offers world-class excellence in baking and pastry arts, including a variety of specialty baked goods, pastries, cookies and candies. The Bakery also produces wholesale restaurant desserts for several of SomeCity\'s premier restaurants and specializes in unique cakes for weddings, corporate celebrations and high profile special events.</p>' + 
-        '            </div>' + 
+        '            <div class="menu-caption">' +
+        '                <h4>Welcome to The Bakery</h4>' +
+        '                <p class="blog-post-meta">The Bakery at Some University offers world-class excellence in baking and pastry arts, including a variety of specialty baked goods, pastries, cookies and candies. The Bakery also produces wholesale restaurant desserts for several of SomeCity\'s premier restaurants and specializes in unique cakes for weddings, corporate celebrations and high profile special events.</p>' +
+        '            </div>' +
         '        </div>' +
         '        <div class="menu row visible-xs">' +
         '            <div class="col-sm-12">' +
@@ -31,29 +31,28 @@ function process(req, res) {
         '                   <p class="lead">at Some University</p>' +
         '               </div> ' +
         '        </div>    ' +
-        '    </div>        ' +        
+        '    </div>        ' +
         '        <div class="menu row">' +
         '            <div class="col-sm-12">' +
         '                <div class="productsrow">';
 
-    
-    for( var key in db.home)
-    {
+
+    for (var key in db.home) {
         var val = db.home[key];
         result +=
-  
+
         '<div class="product menu-category">' +
-        '    <a class="box" href="./' + key + '">' +      
-        '       <div class="menu-category-name list-group-item active">' + val.caption + '</div>' +
-        '       <div class="product-image">' +
-        '           <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
-        '       </div>' +
-        '    </a>' +             
-        '    <a href="./' + key + '" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
-        '</div>';
-         
+            '    <a class="box" href="./' + key + '">' +
+            '       <div class="menu-category-name list-group-item active">' + val.caption + '</div>' +
+            '       <div class="product-image">' +
+            '           <img class="product-image menu-item list-group-item" src="/img/assets/' + val.image + '">' +
+            '       </div>' +
+            '    </a>' +
+            '    <a href="./' + key + '" class="menu-item list-group-item">' + val.message + '<span class="badge">' + val.button + '</span></a>' +
+            '</div>';
+
     }
-    
+
 
     result +=
         '                </div>  <!--/productsrow-->' +

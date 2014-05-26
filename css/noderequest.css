@@ -1,75 +1,109 @@
 html {
-overflow: -moz-scrollbars-vertical; 
-overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
 }
-
 body {
- padding-top:70px;
+    padding-top: 70px;
 }
-
 .productsrow {
-  column-width: 18em;  
- -moz-column-width: 18em;
- -webkit-column-width: 18em;
-
- column-gap:1em;  
- -moz-column-gap: 1em;
- -webkit-column-gap: 1em; 
-
+    column-width: 18em;
+    -moz-column-width: 18em;
+    -webkit-column-width: 18em;
+    column-gap: 1em;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
 }
-
 .menu-caption {
- display: inline-block;
- margin-left: 2.5rem;
- margin-bottom:  0.25rem;
- padding:  1rem;
- width:  95%; 
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-bottom: 0.25rem;
+    padding: 1rem;
 }
-
 .menu-category {
- display: inline-block;
- margin-bottom:  0.25rem;
- padding:  1rem;
- width:  100%; 
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    padding: 1rem;
+    width: 100%;
 }
-
 .product-image {
-  width: 100%;
+    width: 100%;
 }
-
 .product {
-  padding-top:22px;  
+    padding-top: 22px;
 }
-
 .btn-product {
-    background-color:#222;
-    color:#eee;
-    border-radius:0;
+    background-color: #222;
+    color: #eee;
+    border-radius: 0;
 }
-
 .yellow {
-  color:yellow;
-  text-shadow:#ccc 1px 1px 0;
+    color: yellow;
+    text-shadow: #ccc 1px 1px 0;
 }
-
 .jumbotron {
-  background-image: url(../img/assets/bread.png); 
-  background-repeat: no-repeat;
-
-  width: 100%;
+    background-image: url(../img/assets/bread.png);
+    background-repeat: no-repeat;
+    width: 100%;
 }
-
-.jumbotron h1, h2 {
-  color: white;
+.jumbotron h1,
+h2 {
+    color: white;
 }
-
+.jumbotron.aboutus {
+    background-image: url(../img/assets/aboutus.png);
+    align-content: center;
+}
 .tab-content {
     padding-bottom: 100px;
 }
-
 a.box {
     text-decoration: none !important;
     color: #555;
-}    
-    
-
+}
+footer {
+    margin-top: 50px;
+}
+footer a {
+    text-decoration: none !important;
+    color: #555;
+}
+.menu-caption .aboutus {
+    text-align: justify;
+    margin-top: 40px;
+}
+.justify {
+    text-align: justify;
+}
+#time-outer {
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #CCC;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FFF;
+}
+#time-container {
+    height: 100px
+}
+#map-outer {
+    height: 550px;
+    padding: 20px;
+    border: 2px solid #CCC;
+    margin-bottom: 20px;
+    background-color: #FFF;
+}
+#map-container {
+    height: 350px;
+}
+#form-outer {
+    height: 400px;
+    padding: 20px;
+    border: 2px solid #CCC;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    ;
+}
+#form-container {
+    height: 380px;
+}
